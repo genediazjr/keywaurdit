@@ -43,7 +43,9 @@
     "mocha": "2.0.x",
     "chai": "1.10.x",
     "lazy.js": "0.3.2",
-    "uglify-js": "2.4.x"
+    "uglify-js": "2.4.x",
+    "coveralls": "2.11.x",
+    "istanbul": "0.3.x"
   },
   "engines": {
     "node": ">= 0.6.x"
