@@ -1,0 +1,17 @@
+{
+  "indent": 2,
+  "predef": ["beforeEach", "describe", "define", "it"],
+  "plusplus": false,
+  "trailing": true,
+  "noempty": true,
+  "eqeqeq": true,
+  "newcap": true,
+  "nonew": true,
+  "noarg": true,
+  "undef": true,
+  "curly": true,
+  "forin": true,
+  "immed": true,
+  "node": true,
+  "es3": true
+}
