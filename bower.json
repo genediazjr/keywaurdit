@@ -1,0 +1,26 @@
+{
+  "name": "keywaurdit",
+  "version": "0.1.0",
+  "description": "Keyword Auditor",
+  "keywords": [
+    "keyword",
+    "word",
+    "audit",
+    "count",
+    "density"
+  ],
+  "homepage": "https://github.com/letsblumit/keywaurdit",
+  "authors": [
+    "Gene Diaz <genediazjr@gmail.com>"
+  ],
+  "license": "MIT",
+  "main": "./lib/keywaurdit.js",
+  "ignore": [
+    ".*",
+    "*.log",
+    "*.map",
+    "test",
+    "node_modules",
+    "package.json"
+  ]
+}
