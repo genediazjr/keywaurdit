@@ -1,0 +1,51 @@
+{
+  "name": "keywaurdit",
+  "version": "0.1.0",
+  "description": "Keyword Auditor",
+  "keywords": [
+    "keyword",
+    "word",
+    "audit",
+    "count",
+    "density"
+  ],
+  "homepage": "https://letsblumit.github.io/keywaurdit",
+  "bugs": {
+    "url": "https://github.com/letsblumit/keywaurdit/issues"
+  },
+  "license": "MIT",
+  "author": "LetsBlumIt Corp. <info@letsblumit.com> (http://letsblumit.com)",
+  "contributors": [
+    "Gene Diaz Jr. <gene@letsblumit.com> (http://genediazjr.com)"
+  ],
+  "maintainers": [
+    "genediazjr <genediazjr@gmail.com>"
+  ],
+  "main": "./lib/keywaurdit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/letsblumit/keywaurdit.git"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "lint": "jshint lib",
+    "check": "jscs lib",
+    "clean": "rm -rf dist",
+    "build": "npm test && npm run lint && npm run check && npm run clean && npm run uglify",
+    "uglify": "mkdir -p dist && uglifyjs lib/stopwords.js > dist/stopwords.min.js && uglifyjs lib/keywaurdit.js > dist/keywaurdit.min.js && head -7 lib/keywaurdit.js |cat - dist/keywaurdit.min.js > dist/temp && mv dist/temp dist/keywaurdit.min.js && head -7 lib/stopwords.js |cat - dist/stopwords.min.js > dist/temp2 && mv dist/temp2 dist/stopwords.min.js",
+    "stopwords": "node stopwords/compiler.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jscs": "1.7.x",
+    "jshint": "2.5.x",
+    "mocha": "2.0.x",
+    "chai": "1.10.x",
+    "lazy.js": "0.3.2",
+    "uglify-js": "2.4.x"
+  },
+  "engines": {
+    "node": ">= 0.6.x"
+  }
+}
