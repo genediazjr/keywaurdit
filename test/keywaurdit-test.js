@@ -2509,25 +2509,25 @@ stopwordCount + ' stopwords loaded)', function () {
       });
 
       it('must error if option is not a JSON object or undefined', function () {
-        keywaurdit.auditText('', '', function (err, keywords) {
+        keywaurdit.auditText('', '', function (err) {
           assert.equal(
             err,
             ERRORS.invalidOptions
           );
         });
-        keywaurdit.auditText('', 1, function (err, keywords) {
+        keywaurdit.auditText('', 1, function (err) {
           assert.equal(
             err,
             ERRORS.invalidOptions
           );
         });
-        keywaurdit.auditText('', [], function (err, keywords) {
+        keywaurdit.auditText('', [], function (err) {
           assert.equal(
             err,
             ERRORS.invalidOptions
           );
         });
-        keywaurdit.auditText('', {}, function (err, keywords) {
+        keywaurdit.auditText('', {}, function (err) {
           assert.equal(
             err,
             null
@@ -2536,7 +2536,7 @@ stopwordCount + ' stopwords loaded)', function () {
       });
 
       it('must error if option is not valid', function () {
-        keywaurdit.auditText('', {test: 'test'}, function (err, keywords) {
+        keywaurdit.auditText('', {test: 'test'}, function (err) {
           assert.equal(
             err,
             'test ' + ERRORS.invalidNoOption
@@ -2545,31 +2545,31 @@ stopwordCount + ' stopwords loaded)', function () {
       });
 
       it('must error if hideCount option is not a boolean', function (done) {
-        keywaurdit.auditText('', {hideCount: ''}, function (err, keywords) {
+        keywaurdit.auditText('', {hideCount: ''}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidHideCount
           );
         });
-        keywaurdit.auditText('', {hideCount: 1}, function (err, keywords) {
+        keywaurdit.auditText('', {hideCount: 1}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidHideCount
           );
         });
-        keywaurdit.auditText('', {hideCount: {}}, function (err, keywords) {
+        keywaurdit.auditText('', {hideCount: {}}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidHideCount
           );
         });
-        keywaurdit.auditText('', {hideCount: []}, function (err, keywords) {
+        keywaurdit.auditText('', {hideCount: []}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidHideCount
           );
         });
-        keywaurdit.auditText('', {hideCount: keywaurdit}, function (err, keywords) {
+        keywaurdit.auditText('', {hideCount: keywaurdit}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidHideCount
@@ -2579,25 +2579,25 @@ stopwordCount + ' stopwords loaded)', function () {
       });
 
       it('must error if language option is not a string', function (done) {
-        keywaurdit.auditText('', {language: 1}, function (err, keywords) {
+        keywaurdit.auditText('', {language: 1}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLanguage
           );
         });
-        keywaurdit.auditText('', {language: {}}, function (err, keywords) {
+        keywaurdit.auditText('', {language: {}}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLanguage
           );
         });
-        keywaurdit.auditText('', {language: []}, function (err, keywords) {
+        keywaurdit.auditText('', {language: []}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLanguage
           );
         });
-        keywaurdit.auditText('', {language: keywaurdit}, function (err, keywords) {
+        keywaurdit.auditText('', {language: keywaurdit}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLanguage
@@ -2607,7 +2607,7 @@ stopwordCount + ' stopwords loaded)', function () {
       });
 
       it('must error if language value is not an iso 639-1 code', function (done) {
-        keywaurdit.auditText('', {language: 'xx'}, function (err, keywords) {
+        keywaurdit.auditText('', {language: 'xx'}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidCode
@@ -2617,37 +2617,37 @@ stopwordCount + ' stopwords loaded)', function () {
       });
 
       it('must error if minLength value is not a non-negative integer', function (done) {
-        keywaurdit.auditText('', {minLength: ''}, function (err, keywords) {
+        keywaurdit.auditText('', {minLength: ''}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLengths
           );
         });
-        keywaurdit.auditText('', {minLength: -1}, function (err, keywords) {
+        keywaurdit.auditText('', {minLength: -1}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLengths
           );
         });
-        keywaurdit.auditText('', {minLength: 1.1}, function (err, keywords) {
+        keywaurdit.auditText('', {minLength: 1.1}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLengths
           );
         });
-        keywaurdit.auditText('', {minLength: []}, function (err, keywords) {
+        keywaurdit.auditText('', {minLength: []}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLengths
           );
         });
-        keywaurdit.auditText('', {minLength: {}}, function (err, keywords) {
+        keywaurdit.auditText('', {minLength: {}}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLengths
           );
         });
-        keywaurdit.auditText('', {minLength: keywaurdit}, function (err, keywords) {
+        keywaurdit.auditText('', {minLength: keywaurdit}, function (err) {
           assert.equal(
             err,
             ERRORS.invalidLengths
