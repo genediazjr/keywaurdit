@@ -1,6 +1,5 @@
 {
   "indent": 2,
-  "predef": ["beforeEach", "describe", "define", "it"],
   "plusplus": false,
   "trailing": true,
   "noempty": true,
@@ -13,5 +12,9 @@
   "forin": true,
   "immed": true,
   "node": true,
-  "es3": true
+  "es3": true,
+
+  "node": true,
+  "mocha": true,
+  "browser": true
 }
