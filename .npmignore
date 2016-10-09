@@ -2,5 +2,4 @@
 *.log
 *.map
 test
-stopwords
 bower.json
