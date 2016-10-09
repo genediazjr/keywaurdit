@@ -21,25 +21,14 @@
     "url": "https://github.com/genediazjr/keywaurdit.git"
   },
   "scripts": {
-    "test": "mocha test",
-    "lint": "jshint lib",
-    "check": "jscs lib",
-    "clean": "rm -rf dist",
-    "build": "npm test && npm run lint && npm run check && npm run clean && npm run uglify",
-    "uglify": "mkdir -p dist && uglifyjs lib/stopwords.js > dist/stopwords.min.js && uglifyjs lib/keywaurdit.js > dist/keywaurdit.min.js && head -7 lib/keywaurdit.js |cat - dist/keywaurdit.min.js > dist/temp && mv dist/temp dist/keywaurdit.min.js && head -7 lib/stopwords.js |cat - dist/stopwords.min.js > dist/temp2 && mv dist/temp2 dist/stopwords.min.js",
-    "stopwords": "node stopwords/compiler.js"
-  },
-  "dependencies": {
+    "test": "lab -c -v -L -a code"
   },
   "devDependencies": {
-    "jscs": "1.7.x",
-    "jshint": "2.5.x",
-    "mocha": "2.0.x",
-    "chai": "1.10.x",
-    "lazy.js": "0.3.2",
-    "uglify-js": "2.4.x",
     "coveralls": "2.11.x",
-    "istanbul": "0.3.x"
+    "code": "4.0.x",
+    "lab": "11.1.x",
+    "lazy.js": "0.3.2",
+    "uglify-js": "2.4.x"
   },
   "engines": {
     "node": ">= 0.6.x"
