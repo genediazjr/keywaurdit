@@ -9,22 +9,16 @@
     "count",
     "density"
   ],
-  "homepage": "https://letsblumit.github.io/keywaurdit",
+  "homepage": "https://github.com/genediazjr/keywaurdit",
   "bugs": {
-    "url": "https://github.com/letsblumit/keywaurdit/issues"
+    "url": "https://github.com/genediazjr/keywaurdit/issues"
   },
   "license": "MIT",
-  "author": "LetsBlumIt Corp. <info@letsblumit.com> (http://letsblumit.com)",
-  "contributors": [
-    "Gene Diaz Jr. <gene@letsblumit.com> (http://genediazjr.com)"
-  ],
-  "maintainers": [
-    "genediazjr <genediazjr@gmail.com>"
-  ],
+  "author": "Gene Diaz <genediazjr@gmail.com> (http://genediazjr.com)",
   "main": "./lib/keywaurdit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/letsblumit/keywaurdit.git"
+    "url": "https://github.com/genediazjr/keywaurdit.git"
   },
   "scripts": {
     "test": "mocha test",
