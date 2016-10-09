@@ -1,4 +1,4 @@
-Keyword Auditor
+Keywaurdit
 ==========
 
 [![Build Status](https://travis-ci.org/genediazjr/keywaurdit.svg)](https://travis-ci.org/genediazjr/keywaurdit)
